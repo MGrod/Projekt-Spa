@@ -24,6 +24,12 @@ function ready(){
         button.addEventListener('click', addToCartClicked)
     }
 
+    var addToCartButtons2 = document.getElementsByClassName("shop-room-item-button")
+    for (var i = 0; i < addToCartButtons2.length; i++) {
+        var button = addToCartButtons2[i]
+        button.addEventListener('click', addToCartClicked2)
+    }
+
     document.getElementsByClassName('btn-purchase')[0].addEventListener('click', purchaseClicked)
 
 }
@@ -57,6 +63,16 @@ function addToCartClicked(event) {
     var title = shopItem.getElementsByClassName('shop-item-title')[0].innerText
     var price = shopItem.getElementsByClassName('shop-item-price')[0].innerText
     var image = shopItem.getElementsByClassName('shop-item-image')[0].getAttribute('href')
+    addItemToCart(title, price, image)
+    updateCartTotal()
+}
+
+function addToCartClicked2(event) {
+    var button = event.target
+    var shopItem = button.parentElement.parentElement
+    var title = shopItem.getElementsByClassName('shop-item-title2')[0].innerText
+    var price = shopItem.getElementsByClassName('shop-item-price2')[0].value
+    var image = shopItem.getElementsByClassName('shop-item-image2')[0].getAttribute('href')
     addItemToCart(title, price, image)
     updateCartTotal()
 }
@@ -108,5 +124,4 @@ function updateCartTotal() {
     }
     document.getElementsByClassName('cart-total-price')[0].innerText = total + " zł"
 }
-
 

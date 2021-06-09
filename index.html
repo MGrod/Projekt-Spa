@@ -12,9 +12,10 @@
   <link rel="stylesheet" href="../assets/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="carousel.css">
   <link rel="stylesheet" href="./node_modules/jquery/dist/jquery-ui.min.css">
-  <link rel="stylesheet" href="style.css" >
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <script src="./shoping.js" async></script>
+  <!-- <script src="./shoping2.js" async></script> -->
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
@@ -416,108 +417,128 @@
           </div>
         </div>
 
-
-        <!-- Zaplanuj pobyt -->
-        <hr class="featurette-divider">
-
-        <h1 class="display-2 mb-5 pb-5">Rezerwacja pokoju</h1>
-        <div class="card mb-3 hotel-img shop-room-item">
-          <div class="card-body planning">
-            <h5 class="card-title mb-4">Zaplanuj swój pobyt</h5>
-            <div class="input-group mb-3 w-25">
-              <label class="input-group-text" for="inputGroupSelect01">Wybrany pokój:</label>
-              <select class="form-select" id="inputGroupSelect01">
-                <option class="shop-room-item-title" id="room1" value='200'>Pokój nr. 1</option>
-                <option class="shop-room-item-title" id="room2" value="150">Pokój nr. 2</option>
-                <option class="shop-room-item-title" id="room3" value="250">Pokój nr. 3</option>
-              </select>
-            </div>
-            <div class="col-md-3 mb-3">
-              <label for="firstday" class="mb-1">Data przyjazdu: </label>
-              <input type="text" id="przyjazd" class="form-control mb-2" aria-describedby="button-addon1">
-              <label for="lastday" class="mb-1">Data odjazdu: </label>
-              <input type="text" id="wyjazd" class="form-control" aria-describedby="button-addon2">
-            </div>
-            <div class="col-md-4 mb-3">
-              <label for="totaldays" class="mb-1">Ilość dni: </label>
-              <input type="text" id="totalDays" class="no-border" disabled />
-            </div>
-            <div class="col-md-4 mb-3">
-              <label for="totaldays">Cena za pobyt: </label>
-              <input type="text" id="totalPrice" class="no-border cart-price shop-item-price" disabled />
-            </div>
-            <button onclick="buttonRoomClicked()" class="btn btn-outline-primary shop-room-item-button" type="button"
-              id="button-addon3">Zarezerwuj</button>
-          </div>
-        </div>
-
+        <option class="shop-room-item-title" id="room1" value='200'></option>
+        <option class="shop-room-item-title" id="room2" value="150"></option>
+        <option class="shop-room-item-title" id="room3" value="250"></option>
 
         <!-- POKOJE -->
 
         <hr class="featurette-divider" id="pokoje">
-
-        <h1 class="display-2 mb-5 pb-5">Nasze pokoje</h1>
-        <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading"><span class="text-muted">Pokój nr. 1</span>
-            </h2>
-            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum adipisci illum impedit,
-              excepturi iure perspiciatis deleniti laudantium ipsa, harum tempore, beatae esse quod dolor debitis
-              delectus consequatur accusamus laborum dolorum.</p>
+        <div class="shop-items">
+          <h1 class="display-2 mb-5 pb-5">Nasze pokoje</h1>
+          <div class="row featurette shop-item2">
+            <div class="col-md-7">
+              <h2 class="featurette-heading"><span class="text-muted shop-item-title2">Pokój nr. 1</span>
+              </h2>
+              <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum adipisci illum
+                impedit,
+                excepturi iure perspiciatis deleniti laudantium ipsa, harum tempore, beatae esse quod dolor debitis
+                delectus consequatur accusamus laborum dolorum.</p>
+              <div class="col-md-3 mb-3">
+                <label for="firstday" class="mb-1">Data przyjazdu: </label>
+                <input type="text" id="przyjazd1" class="form-control mb-2" aria-describedby="button-addon1">
+                <label for="lastday" class="mb-1">Data odjazdu: </label>
+                <input type="text" id="wyjazd1" class="form-control" aria-describedby="button-addon2">
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="totalDays1" class="mb-1">Ilość dni: </label>
+                <input type="text" id="totalDays1" class="no-border" disabled />
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="totalDays1">Cena za pobyt: </label>
+                <input type="text" id="totalPrice1" class="no-border cart-price shop-item-price2" disabled />
+              </div>
+              <button class="btn btn-outline-primary shop-room-item-button" type="button"
+                id="button-addon3">Zarezerwuj</button>
+            </div>
+            <div class="col-md-5">
+              <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
+                preserveAspectRatio="xMidYMid slice" focusable="false">
+                <image class="myImage shop-item-image2" href="./img/room1.jpg" height="100%" />
+              </svg>
+              <p class="lead fs-4 mt-4">Cena: 200 zł za noc</p>
+            </div>
           </div>
-          <div class="col-md-5">
-            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-              height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
-              preserveAspectRatio="xMidYMid slice" focusable="false">
-              <image class="myImage cart-item-image" href="./img/room1.jpg" height="100%" />
-            </svg>
-            <p class="lead fs-4 mt-4">Cena: 200 zł za noc</p>
+
+          <hr class="featurette-divider">
+
+          <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+              <h2 class="featurette-heading"><span class="text-muted shop-item-title2">Pokój nr. 2</span></h2>
+              <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui suscipit ut deleniti omnis
+                sit,
+                sint id placeat repellendus praesentium! Voluptates, voluptatem? Pariatur, sapiente sint quis ducimus
+                nisi
+                quae inventore repudiandae.</p>
+              <div class="col-md-3 mb-3">
+                <label for="firstday" class="mb-1">Data przyjazdu: </label>
+                <input type="text" id="przyjazd2" class="form-control mb-2" aria-describedby="button-addon1">
+                <label for="lastday" class="mb-1">Data odjazdu: </label>
+                <input type="text" id="wyjazd2" class="form-control" aria-describedby="button-addon2">
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="totalDays2" class="mb-1">Ilość dni: </label>
+                <input type="text" id="totalDays2" class="no-border" disabled />
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="totalDays2">Cena za pobyt: </label>
+                <input type="text" id="totalPrice2" class="no-border cart-price shop-item-price2" disabled />
+              </div>
+              <button class="btn btn-outline-primary shop-room-item-button" type="button"
+                id="button-addon3">Zarezerwuj</button>
+            </div>
+            <div class="col-md-5 order-md-1">
+              <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
+                preserveAspectRatio="xMidYMid slice" focusable="false">
+                <image class="myImage shop-item-image2" href="./img/room2.jpg" height="100%" />
+              </svg>
+              <p class="lead fs-4 mt-4">Cena: 150 zł za noc</p>
+            </div>
+          </div>
+
+          <hr class="featurette-divider">
+
+          <div class="row featurette">
+            <div class="col-md-7">
+              <h2 class="featurette-heading"><span class="text-muted shop-item-title2">Pokój nr. 3</span></h2>
+              <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci rerum reiciendis
+                laboriosam modi dolorem sint totam asperiores error id ullam non facilis culpa dignissimos omnis,
+                accusantium impedit quaerat pariatur enim.</p>
+              <div class="col-md-3 mb-3">
+                <label for="firstday" class="mb-1">Data przyjazdu: </label>
+                <input type="text" id="przyjazd3" class="form-control mb-2" aria-describedby="button-addon1">
+                <label for="lastday" class="mb-1">Data odjazdu: </label>
+                <input type="text" id="wyjazd3" class="form-control" aria-describedby="button-addon2">
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="totaldays3" class="mb-1">Ilość dni: </label>
+                <input type="text" id="totalDays3" class="no-border" disabled />
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="totaldays3">Cena za pobyt: </label>
+                <input type="text" id="totalPrice3" class="no-border cart-price shop-item-price2" disabled />
+              </div>
+              <button class="btn btn-outline-primary shop-room-item-button" type="button"
+                id="button-addon3">Zarezerwuj</button>
+            </div>
+            <div class="col-md-5">
+              <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
+                preserveAspectRatio="xMidYMid slice" focusable="false">
+                <image class="myImage shop-item-image2" href="./img/room3.jpg" height="100%" />
+              </svg>
+              <p class="lead fs-4 mt-4">Cena: 250 zł za noc</p>
+            </div>
           </div>
         </div>
-
-        <hr class="featurette-divider">
-
-        <div class="row featurette">
-          <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading"><span class="text-muted">Pokój nr. 2</span></h2>
-            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui suscipit ut deleniti omnis sit,
-              sint id placeat repellendus praesentium! Voluptates, voluptatem? Pariatur, sapiente sint quis ducimus nisi
-              quae inventore repudiandae.</p>
-          </div>
-          <div class="col-md-5 order-md-1">
-            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-              height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
-              preserveAspectRatio="xMidYMid slice" focusable="false">
-              <image class="myImage cart-item-image" href="./img/room2.jpg" height="100%" />
-            </svg>
-            <p class="lead fs-4 mt-4">Cena: 150 zł za noc</p>
-          </div>
-        </div>
-
-        <hr class="featurette-divider">
-
-        <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading"><span class="text-muted">Pokój nr. 3</span></h2>
-            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci rerum reiciendis
-              laboriosam modi dolorem sint totam asperiores error id ullam non facilis culpa dignissimos omnis,
-              accusantium impedit quaerat pariatur enim.</p>
-          </div>
-          <div class="col-md-5">
-            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-              height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
-              preserveAspectRatio="xMidYMid slice" focusable="false">
-              <image class="myImage cart-item-image" href="./img/room3.jpg" height="100%" />
-            </svg>
-            <p class="lead fs-4 mt-4">Cena: 250 zł za noc</p>
-          </div>
-        </div>
-
         <hr class="featurette-divider">
 
         <!-- FOOTER -->
         <footer class="container">
-          <p>&copy; 2021–2022 Mateusz Grodzicki, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+          <p>&copy; 2021–2022 Mateusz Grodzicki, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a>
+          </p>
         </footer>
   </main>
 
@@ -526,4 +547,5 @@
   <script src="./node_modules/jquery/dist/jquery-ui.min.js"></script>
   <script src="./kalendarz.js"></script>
 </body>
+
 </html>
